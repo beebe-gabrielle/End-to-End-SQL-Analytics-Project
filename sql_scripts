@@ -1,1 +1,7 @@
-
+├── sql_scripts/
+│   ├── ddl/
+│   │   └── create_tables.sql
+│   ├── dml/
+│   │   └── insert_data.sql
+│   └── queries/
+│       └── analysis_queries.sql
