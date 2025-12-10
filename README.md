@@ -1,22 +1,26 @@
-# Project Title
-*Example: Analyzing Customer Churn to Identify Retention Strategies*
+## End‑to‑End SQL Project: Schema Design, Cleaning, and Business Analysis
 
 ## 1. Project Overview & Context
-Provide a brief background on the project and why it was undertaken. Explain the business problem you are trying to solve and who would care about the results.
+This project uses a synthetic retail/e‑commerce dataset generated using the AI platform 'Tonic Fabricate' to simulate operations at a fictional Detroit‑inspired local retailer, "Woodward Market & Co". I've generated the dataset to reflect the messy, inconsistent data challenges businesses face in real life.
 
-*   **Objective:** State the main goal of the analysis.
-*   **Business Value:** Clearly explain why this project is important and useful to a potential employer or client.
+<img width="828" height="230" alt="image" src="https://github.com/user-attachments/assets/a59f31f0-e64a-4c9d-afcf-82da84f7a63b" />
 
-## 2. Data Sources & Description
-Describe where the data came from, its source (e.g., public dataset, internal database), and provide a quick rundown of key columns or tables.
 
-*   **Source:** Include links to the original data source(s) if possible.
-*   **Files:** Briefly list relevant filenames and their contents.
-*   **Tools Used:** List the software and libraries used (e.g., Python, R, SQL, Power BI, Excel).
+**Objective:** The goal of this project is to design a normalized SQL schema, clean messy transactional data, and generate actionable insights. By enforcing referential integrity and applying advanced SQL techniques, the project demonstrates how raw, inconsistent data can be transformed into reliable business intelligence.
 
-## 3. Methodology & Data Cleaning
-Outline the steps taken during the project lifecycle. This demonstrates your process and problem-solving skills.
+**Business Problem:** Retail businesses often struggle with poor data quality. These issues make it difficult to track customer behavior, monitor inventory, and measure product performance. Without clean data, decision‑making is slow and error‑prone.
 
+**Business Value:** This project shows how SQL can solve those problems by:
+*  Enforcing data integrity with primary and foreign keys.
+*  Cleaning and standardizing messy data for accurate reporting.
+*  Producing insights into customer lifetime value, category performance, and inventory shortages.
+
+## 2. Methodology & Data Cleaning
+*   **Creating Database Schema:** This dataset is structured into multiple relational tables including order_items, orders, inventory, products, and customers. An Entity Relationship Diagram (ERD) was designed to map out the relationships between these tables, guiding the schema creation process and ensuring proper use of primary and foreign keys.
+
+<img width="866" height="536" alt="image" src="https://github.com/user-attachments/assets/e6797eb5-075f-491c-afa7-f0c4a77d7bb9" />
+
+  
 *   **Data Cleaning:** Briefly explain the process you went through to clean the data (e.g., handling missing values, removing outliers, changing data formats).
 *   **Analysis:** Mention specific analyses performed or models used.
 
@@ -46,3 +50,79 @@ Provide a way for interested parties to contact you regarding the project.
 *   **Email:** your.email@example.com
 *   **LinkedIn:** [Your LinkedIn Profile](link-to-your-linkedin)
 *   **
+
+
+Dataset Idea
+Retail/E-commerce transactions (orders, customers, products, inventory).
+
+You can generate synthetic data with Mockaroo or pull a Kaggle dataset.
+
+Structure it into multiple tables:
+
+Customers (customer_id, name, location, signup_date)
+
+Orders (order_id, customer_id, product_id, order_date, quantity, total_price)
+
+Products (product_id, category, unit_price, stock_level)
+
+Inventory (product_id, warehouse, stock_count, last_updated)
+
+🔹 Workflow (Top-to-Bottom)
+Data Import & Schema Design
+
+Create tables with proper primary keys and foreign keys.
+
+Define constraints (NOT NULL, UNIQUE, CHECK).
+
+Import raw CSVs into SQL (MySQL, PostgreSQL, or SQL Server).
+
+Data Cleaning
+
+Handle missing values (e.g., default stock levels).
+
+Normalize inconsistent date formats.
+
+Remove duplicates with ROW_NUMBER() or DISTINCT.
+
+Validate referential integrity (e.g., every order must have a valid customer_id).
+
+Exploratory Queries
+
+Top 10 customers by revenue.
+
+Monthly sales trends (GROUP BY DATE_TRUNC('month', order_date)).
+
+Inventory shortages (products with stock_level < threshold).
+
+Category-level performance (aggregate by product category).
+
+Advanced SQL Features
+
+Window functions: Running totals, moving averages.
+
+CTEs (Common Table Expressions): Break down complex queries.
+
+Joins: Multi-table joins for customer-product insights.
+
+Stored Procedures/Views: Automate reporting queries.
+
+Final Reporting Layer
+
+Create a dashboard-ready view (e.g., sales_summary_view) that aggregates KPIs: revenue, orders, top categories, inventory alerts.
+
+Export cleaned tables or connect directly to Power BI/Tableau for visualization.
+
+🔹 Deliverables
+SQL scripts for schema creation, cleaning, and queries.
+
+A GitHub repo with:
+
+/schema.sql (table definitions)
+
+/cleaning.sql (data cleaning queries)
+
+/analysis.sql (exploratory + advanced queries)
+
+/views.sql (reporting layer)
+
+Optional: A Power BI/Tableau dashboard connected to your SQL database.
