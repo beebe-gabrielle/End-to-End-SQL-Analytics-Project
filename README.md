@@ -21,14 +21,21 @@ This project uses a synthetic retail/e‑commerce dataset generated using the AI
 <img width="866" height="536" alt="image" src="https://github.com/user-attachments/assets/e6797eb5-075f-491c-afa7-f0c4a77d7bb9" />
 
   
-## 3. Data Cleaning:** 
+## 3. Data Cleaning:
 
 For the data cleaning process, I started with the first table customers. Here is the original data: 
 
 <img width="1102" height="230" alt="image" src="https://github.com/user-attachments/assets/f8b37fa5-9ffa-4601-a47b-2faa9485b107" />
+</p>
+I completed the following task:
 
-
-*   **Analysis:** Mention specific analyses performed or models used.
+* Normalized 'state' to have code abbreviations
+* Normalized 'phone' into XXX-XXX-XXXX format
+* Normalized 'zip_code' to store only the first 5 numbers
+</p>
+The resulting table with clean data:
+</p>
+<img width="1046" height="233" alt="image" src="https://github.com/user-attachments/assets/49c6c4bb-cbfe-4104-96a8-5564ef228056" />
 
 ## 4. Key Insights & Visualizations
 This section is crucial for showcasing your findings. Display key visuals (if hosted elsewhere, like a dashboard) and explain what they represent.
@@ -43,92 +50,4 @@ Officially answer the questions posed in the problem statement. Provide actionab
 *   **Recommendation 2:** Suggest another action.
 *   **Conclusion:** Summarize the overall project outcome and the value delivered.
 
-## 6. Getting Started / Reproducibility (Optional)
-If others want to run your code, provide step-by-step instructions.
 
-*   **Prerequisites:** List required software or packages.
-*   **Installation:** Provide code snippets or steps to get the environment running.
-
-## 7. Contact
-Provide a way for interested parties to contact you regarding the project.
-
-*   **Name:** Your Name
-*   **Email:** your.email@example.com
-*   **LinkedIn:** [Your LinkedIn Profile](link-to-your-linkedin)
-*   **
-
-
-Dataset Idea
-Retail/E-commerce transactions (orders, customers, products, inventory).
-
-You can generate synthetic data with Mockaroo or pull a Kaggle dataset.
-
-Structure it into multiple tables:
-
-Customers (customer_id, name, location, signup_date)
-
-Orders (order_id, customer_id, product_id, order_date, quantity, total_price)
-
-Products (product_id, category, unit_price, stock_level)
-
-Inventory (product_id, warehouse, stock_count, last_updated)
-
-🔹 Workflow (Top-to-Bottom)
-Data Import & Schema Design
-
-Create tables with proper primary keys and foreign keys.
-
-Define constraints (NOT NULL, UNIQUE, CHECK).
-
-Import raw CSVs into SQL (MySQL, PostgreSQL, or SQL Server).
-
-Data Cleaning
-
-Handle missing values (e.g., default stock levels).
-
-Normalize inconsistent date formats.
-
-Remove duplicates with ROW_NUMBER() or DISTINCT.
-
-Validate referential integrity (e.g., every order must have a valid customer_id).
-
-Exploratory Queries
-
-Top 10 customers by revenue.
-
-Monthly sales trends (GROUP BY DATE_TRUNC('month', order_date)).
-
-Inventory shortages (products with stock_level < threshold).
-
-Category-level performance (aggregate by product category).
-
-Advanced SQL Features
-
-Window functions: Running totals, moving averages.
-
-CTEs (Common Table Expressions): Break down complex queries.
-
-Joins: Multi-table joins for customer-product insights.
-
-Stored Procedures/Views: Automate reporting queries.
-
-Final Reporting Layer
-
-Create a dashboard-ready view (e.g., sales_summary_view) that aggregates KPIs: revenue, orders, top categories, inventory alerts.
-
-Export cleaned tables or connect directly to Power BI/Tableau for visualization.
-
-🔹 Deliverables
-SQL scripts for schema creation, cleaning, and queries.
-
-A GitHub repo with:
-
-/schema.sql (table definitions)
-
-/cleaning.sql (data cleaning queries)
-
-/analysis.sql (exploratory + advanced queries)
-
-/views.sql (reporting layer)
-
-Optional: A Power BI/Tableau dashboard connected to your SQL database.
