@@ -23,7 +23,10 @@ This project uses a synthetic retail/e‑commerce dataset generated using the AI
   
 ## 3. Data Cleaning:** 
 
-Briefly explain the process you went through to clean the data (e.g., handling missing values, removing outliers, changing data formats)
+For the data cleaning process, I started with the first table customers. Here is the original data: 
+
+<img width="1102" height="230" alt="image" src="https://github.com/user-attachments/assets/f8b37fa5-9ffa-4601-a47b-2faa9485b107" />
+
 
 *   **Analysis:** Mention specific analyses performed or models used.
 
